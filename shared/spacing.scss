@@ -1,0 +1,448 @@
+@use 'sass:list';
+@use "sass:meta";
+@use "sass:string";
+/***
+** space vars
+***/
+$space-atom: 1rem;
+$space-scale: 10;
+$space-scaler: 1.5;
+
+$marginMap: (
+  mr: 'margin-right',
+  ml: 'margin-left',
+  mt: 'margin-top',
+  mb: 'margin-bottom',
+  ma: 'margin'
+);
+$marginArr: ma, mr, ml, mt, mb;
+$paddingArr: pa, pr, pl, pt, pb;
+
+$space-1: $space-atom * pow($space-scaler, 0);
+$space-2: $space-atom * pow($space-scaler, 1);
+$space-3: $space-atom * pow($space-scaler, 2);
+$space-4: $space-atom * pow($space-scaler, 3);
+$space-5: $space-atom * pow($space-scaler, 4);
+$space-6: $space-atom * pow($space-scaler, 5);
+$space-7: $space-atom * pow($space-scaler, 6);
+$space-8: $space-atom * pow($space-scaler, 7);
+$space-9: $space-atom * pow($space-scaler, 8);
+$space-10: $space-atom * pow($space-scaler, 9);
+
+@mixin mr-0 {
+  margin-right: 0;
+}
+
+@mixin ml-0 {
+  margin-left: 0;
+}
+
+@mixin mb-0 {
+  margin-bottom: 0;
+}
+
+@mixin mt-0 {
+  margin-top: 0;
+}
+
+@mixin ma-0 {
+  margin: 0;
+}
+
+@mixin mr-1 {
+  margin-right: $space-1;
+}
+
+@mixin ml-1 {
+  margin-left: $space-1;
+}
+
+@mixin mb-1 {
+  margin-bottom: $space-1;
+}
+
+@mixin mt-1 {
+  margin-top: $space-1;
+}
+
+@mixin ma-1 {
+  margin: $space-1;
+}
+
+// space-2
+@mixin mr-2 {
+  margin-right: $space-2;
+}
+
+@mixin ml-2 {
+  margin-left: $space-2;
+}
+
+@mixin mb-2 {
+  margin-bottom: $space-2;
+}
+
+@mixin mt-2 {
+  margin-top: $space-2;
+}
+
+@mixin ma-2 {
+  margin: $space-2;
+}
+
+// space-3
+@mixin mr-3 {
+  margin-right: $space-3;
+}
+
+@mixin ml-3 {
+  margin-left: $space-3;
+}
+
+@mixin mb-3 {
+  margin-bottom: $space-3;
+}
+
+@mixin mt-3 {
+  margin-top: $space-3;
+}
+
+@mixin ma-3 {
+  margin: $space-3;
+}
+
+// space-4
+@mixin mr-4 {
+  margin-right: $space-4;
+}
+
+@mixin ml-4 {
+  margin-left: $space-4;
+}
+
+@mixin mb-4 {
+  margin-bottom: $space-4;
+}
+
+@mixin mt-4 {
+  margin-top: $space-4;
+}
+
+@mixin ma-4 {
+  margin: $space-4;
+}
+
+// space-5
+@mixin mr-5 {
+  margin-right: $space-5;
+}
+
+@mixin ml-5 {
+  margin-left: $space-5;
+}
+
+@mixin mb-5 {
+  margin-bottom: $space-5;
+}
+
+@mixin mt-5 {
+  margin-top: $space-5;
+}
+
+@mixin ma-5 {
+  margin: $space-5;
+}
+
+// space-6
+@mixin mr-6 {
+  margin-right: $space-6;
+}
+
+@mixin ml-6 {
+  margin-left: $space-6;
+}
+
+@mixin mb-6 {
+  margin-bottom: $space-6;
+}
+
+@mixin mt-6 {
+  margin-top: $space-6;
+}
+
+@mixin ma-6 {
+  margin: $space-6;
+}
+
+// space-7
+@mixin mr-7 {
+  margin-right: $space-7;
+}
+
+@mixin ml-7 {
+  margin-left: $space-7;
+}
+
+@mixin mb-7 {
+  margin-bottom: $space-7;
+}
+
+@mixin mt-7 {
+  margin-top: $space-7;
+}
+
+@mixin ma-7 {
+  margin: $space-7;
+}
+
+// space-8
+@mixin mr-8 {
+  margin-right: $space-8;
+}
+
+@mixin ml-8 {
+  margin-left: $space-8;
+}
+
+@mixin mb-8 {
+  margin-bottom: $space-8;
+}
+
+@mixin mt-8 {
+  margin-top: $space-8;
+}
+
+@mixin ma-8 {
+  margin: $space-8;
+}
+
+// space-9
+@mixin mr-9 {
+  margin-right: $space-9;
+}
+
+@mixin ml-9 {
+  margin-left: $space-9;
+}
+
+@mixin mb-9 {
+  margin-bottom: $space-9;
+}
+
+@mixin mt-9 {
+  margin-top: $space-9;
+}
+
+@mixin pa-9 {
+  padding: $space-9;
+}
+
+@mixin pr-0 {
+  padding-right: 0;
+}
+
+@mixin pl-0 {
+  padding-left: 0;
+}
+
+@mixin pb-0 {
+  padding-bottom: 0;
+}
+
+@mixin pt-0 {
+  padding-top: 0;
+}
+
+@mixin ma-0 {
+  margin: 0;
+}
+
+// space-1
+@mixin pr-1 {
+  padding-right: $space-1;
+}
+
+@mixin pl-1 {
+  padding-left: $space-1;
+}
+
+@mixin pb-1 {
+  padding-bottom: $space-1;
+}
+
+@mixin pt-1 {
+  padding-top: $space-1;
+}
+
+@mixin pa-1 {
+  padding: $space-1;
+}
+
+// space-2
+@mixin pr-2 {
+  padding-right: $space-2;
+}
+
+@mixin pl-2 {
+  padding-left: $space-2;
+}
+
+@mixin pb-2 {
+  padding-bottom: $space-2;
+}
+
+@mixin pt-2 {
+  padding-top: $space-2;
+}
+
+@mixin pa-2 {
+  padding: $space-2;
+}
+
+// space-3
+@mixin pr-3 {
+  padding-right: $space-3;
+}
+
+@mixin pl-3 {
+  padding-left: $space-3;
+}
+
+@mixin pb-3 {
+  padding-bottom: $space-3;
+}
+
+@mixin pt-3 {
+  padding-top: $space-3;
+}
+
+@mixin pa-3 {
+  padding: $space-3;
+}
+
+// space-4
+@mixin pr-4 {
+  padding-right: $space-4;
+}
+
+@mixin pl-4 {
+  padding-left: $space-4;
+}
+
+@mixin pb-4 {
+  padding-bottom: $space-4;
+}
+
+@mixin pt-4 {
+  padding-top: $space-4;
+}
+
+@mixin pa-4 {
+  padding: $space-4;
+}
+
+// space-5
+@mixin pr-5 {
+  padding-right: $space-5;
+}
+
+@mixin pl-5 {
+  padding-left: $space-5;
+}
+
+@mixin pb-5 {
+  padding-bottom: $space-5;
+}
+
+@mixin pt-5 {
+  padding-top: $space-5;
+}
+
+@mixin pa-5 {
+  padding: $space-5;
+}
+
+// space-6
+@mixin pr-6 {
+  padding-right: $space-6;
+}
+
+@mixin pl-6 {
+  padding-left: $space-6;
+}
+
+@mixin pb-6 {
+  padding-bottom: $space-6;
+}
+
+@mixin pt-6 {
+  padding-top: $space-6;
+}
+
+@mixin pa-6 {
+  padding: $space-6;
+}
+
+// space-7
+@mixin pr-7 {
+  padding-right: $space-7;
+}
+
+@mixin pl-7 {
+  padding-left: $space-7;
+}
+
+@mixin pb-7 {
+  padding-bottom: $space-7;
+}
+
+@mixin pt-7 {
+  padding-top: $space-7;
+}
+
+@mixin pa-7 {
+  padding: $space-7;
+}
+
+// space-8
+@mixin pr-8 {
+  padding-right: $space-8;
+}
+
+@mixin pl-8 {
+  padding-left: $space-8;
+}
+
+@mixin pb-8 {
+  padding-bottom: $space-8;
+}
+
+@mixin pt-8 {
+  padding-top: $space-8;
+}
+
+@mixin pa-8 {
+  padding: $space-8;
+}
+
+// space-9
+@mixin pr-9 {
+  padding-right: $space-9;
+}
+
+@mixin pl-9 {
+  padding-left: $space-9;
+}
+
+@mixin pb-9 {
+  padding-bottom: $space-9;
+}
+
+@mixin pt-9 {
+  padding-top: $space-9;
+}
+
+@mixin pa-9 {
+  padding: $space-9;
+}
+

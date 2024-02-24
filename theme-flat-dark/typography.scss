@@ -1,0 +1,191 @@
+
+
+p,
+ul,
+ol,
+dl,
+figure,
+blockquote,
+table,
+hr,
+.body__default,
+.body__large,
+.body__small {
+  font-family: $base-family;
+  font-weight: $base-weight;
+  line-height: $base-line-height;
+  font-size: $type-base-size;
+}
+
+strong,
+.strong {
+  font-family: $base-family;
+  font-weight: 700;
+}
+
+em,
+.em {
+  font-family: $base-family;
+  font-style: italic;
+}
+
+blockquote {
+  background-color: $gray-300;
+  padding: 0.5rem;
+  border-left: darken($gray-300, 10%) solid 10px;
+}
+
+
+@include headerType($header-family, $header-line-height, $header-weight);
+
+
+@media screen and (min-width: 100px) {
+  $type-scaler: 1.2; //$type-scaler;
+  $header-base-size: $type-base-size; //16px;
+  @include typeScales($header-base-size, $type-scaler);
+
+
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  input,
+  textarea,
+  blockquote,
+  code,
+  strong,
+  em,
+  pre,
+  .char-100 {
+    max-width: 620px;
+  }
+
+
+  @include char__readable(520px);
+}
+
+// 700px and up
+@media screen and (min-width: $media-small) {
+  $type-scaler: 1.22;
+  $header-base-size: $type-base-size; //16px;
+  @include typeScales($header-base-size, $type-scaler);
+
+  h1,
+  h2,
+  h3 {
+    max-width: 620px;
+  }
+
+  
+
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  input,
+  textarea,
+  blockquote,
+  code,
+  strong,
+  em,
+  pre,
+  .char__readable {
+    @include char__readable(520px);
+  }
+
+}
+
+// 960px
+
+@media screen and (min-width: $media-med) {
+  $type-scaler: 1.25;
+  $header-base-size: $type-base-size; //16px;
+  @include typeScales($header-base-size, $type-scaler);
+
+
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  input,
+  textarea,
+  blockquote,
+  code,
+  strong,
+  em,
+  .char__readable {
+    @include char__readable(750px);
+  }
+
+
+}
+
+@media screen and (min-width: $media-large) {
+  $type-scaler: 1.33;
+  $header-base-size: $type-base-size; //16px;
+  @include typeScales($header-base-size, $type-scaler);
+
+
+
+  h1,
+  h2,
+  h3 {
+    max-width: 1070px;
+  }
+
+
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  input,
+  textarea,
+  blockquote,
+  code,
+  strong,
+  em,
+  .char__readable {
+    @include char__readable(750px);
+  }
+
+
+
+}
+
+@media screen and (min-width: $media-xlarge) {
+  $type-scaler: 1.33;
+  $header-base-size: $type-base-size; //16px;
+  @include typeScales($header-base-size, $type-scaler);
+
+
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  input,
+  textarea,
+  blockquote,
+  code,
+  strong,
+  em,
+  .char__readable {
+    @include char__readable(750px);
+  }
+
+  .char-80 {
+    max-width: 1340px;
+  }
+
+  .char-50 {
+    max-width: 820px;
+  }
+
+
+}

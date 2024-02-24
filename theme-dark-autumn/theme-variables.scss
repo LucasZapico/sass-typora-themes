@@ -1,0 +1,31 @@
+
+/**
+**
+** COLORS
+**/
+$sidebar-bg: $gray-500;
+$main-bg: $gray-500;
+$body-text-color: $gray-100;
+
+/***
+**
+** TYPOGRAPHY
+**
+**/
+$type-base-size: 18px;
+$type-width: 650px;
+// body variables 
+$base-family : 'Montserrat',
+sans-serif;
+$base-line-height: 1.4;
+$base-weight : 500;
+
+// header variables 
+$header-family : 'Montserrat',
+sans-serif;
+$header-base-size : $type-base-size;
+$header-line-height: $base-line-height;
+$header-weight : 400;
+$type-scaler : 1.2;
+$display-family: $header-family;
+
