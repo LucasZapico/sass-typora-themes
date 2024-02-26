@@ -1,0 +1,29 @@
+/***
+This config aim to make the commonly altered elements in the theme easier to change.
+**/
+
+$main-bg: darken($brown-500, 15%);
+// sidebar
+$sidebar-bg: darken($gray-500, 10%);
+$sidebar-text: $gray-200;
+
+// selected text color
+$accent-color: rgba($red-300, 70%);
+$tooltip: $gray-300;
+
+/***
+typography color 
+**/
+$header-color: $yellow-400;
+$header-1: $yellow-400;
+$header-2: $yellow-400;
+$header-3: $yellow-400;
+$header-4: $yellow-400;
+$header-5: $yellow-400;
+$header-6: $yellow-400;
+
+/**
+body color handles, p,input, select, textarea, button, ul, ol, dl, figure, blockquote, table, hr
+**/ 
+$body-color: $gray-300;
+
