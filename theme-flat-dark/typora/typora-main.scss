@@ -1,14 +1,4 @@
-$background: $gray-500;
-// sidebar background color
-$sidebar-bg: $gray-500;
-// selected text color
-$accent-color: rgba($red-300, 70%);
-
-$header-color: $gray-200;
-$body-color: $gray-300;
-$tooltip: $gray-300;
-
-html {
+**html {
   font-size: $type-base-size;
   -webkit-font-smoothing: antialiased;
 }
@@ -18,7 +8,7 @@ body {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   background: $main-bg;
-  background: $main-bg;
+  color: $body-color;
   fill: currentColor;
   line-height: $base-line-height;
 }
@@ -63,13 +53,13 @@ input,
 select,
 textarea,
 div.code-tooltip-content {
-  color: $gray-200;
+  color: $body-color;
   border-color: transparent;
 }
 
 div.code-tooltip,
 .md-hover-tip .md-arrow:after {
-  background: $gray-500;
+  background: $gray-800;
 }
 
 .native-window #md-notification {
@@ -77,7 +67,7 @@ div.code-tooltip,
 }
 
 .popover.bottom > .arrow:after {
-  border-bottom-color: $gray-500;
+  border-bottom-color: $gray-800;
 }
 
 html,
@@ -101,7 +91,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $gray-400;
+  color: $header-color
 }
 
 h1,
@@ -125,6 +115,8 @@ h1 {
   @include mt-2;
   @include mb-1;
   font-weight: bold;
+  // 👇 custom heading 1 color override
+  color: $header-1;
 }
 
 h2 {
@@ -134,6 +126,8 @@ h2 {
   @include mb-1;
   letter-spacing: -1px;
   font-weight: bold;
+  // 👇 custom heading color override
+  color: $header-2
 }
 
 h3 {
@@ -143,6 +137,9 @@ h3 {
   @include mb-1;
   letter-spacing: -1px;
   font-weight: bold;
+  
+  // 👇 custom heading color override
+  color: $header-3;
 }
 
 h4 {
@@ -151,6 +148,8 @@ h4 {
   @include mt-2;
   @include mb-1;
   font-weight: bold;
+  color: $header-4;
+
 }
 
 h5 {
@@ -158,6 +157,7 @@ h5 {
   line-height: $leading-snug;
   @include mt-2;
   @include mb-1;
+  color: $header-5;
   font-weight: bold;
 }
 
@@ -166,6 +166,7 @@ h6 {
   line-height: $leading-snug;
   @include mt-2;
   @include mb-1;
+  color: $header-6;
   font-weight: bold;
 }
 
@@ -307,11 +308,14 @@ cite {
 }
 
 blockquote {
-  padding-left: 1.875rem;
-  margin: 0 0 1.875rem 1.875rem;
-  border-left: solid 2px $gray-500;
-  padding-left: 30px;
-  margin-top: 35px;
+  padding-left: $space-2;
+  padding-top: $space-2;
+  padding-bottom: $space-2;
+  margin: 0 0 $space-1 $space-1;
+  border-left: solid 2px $blockquote-border;
+  margin-top: $space-1;
+  color: $blockquote-color;
+  background-color: $blockquote-bg;
 }
 
 pre,
@@ -333,7 +337,7 @@ kbd {
   padding: 2px 4px;
   font-size: 90%;
   color: $white;
-  background: $gray-500;
+  background: $gray-800;
   border-radius: 3px;
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
@@ -341,11 +345,11 @@ kbd {
 pre.md-fences {
   padding: 10px 10px 10px 30px;
   margin-bottom: 20px;
-  background: $gray-500;
+  background: $gray-800;
 }
 
 .CodeMirror-gutters {
-  background: $gray-500;
+  background: $gray-800;
   border-right: 1px solid transparent;
 }
 
@@ -407,26 +411,24 @@ b,
 th,
 dt,
 strong {
-  color: #dedede;
+  color: $strong-color;
   /* variable */
 }
 
 mark {
-  background: #d3d40e;
+  background: rgba($mark-color, 40%);
 }
 
-blockquote {
-  color: $gray-400;
-}
+
 
 table a {
-  color: #dedede;
+  color: $gray-200;
   /* variable */
 }
 
 th,
 td {
-  border: solid 1px #474d54;
+  border: solid 1px $gray-400;
   /* variable */
 }
 
@@ -450,7 +452,7 @@ td {
   vertical-align: middle;
   text-align: center;
   border: 1px solid $gray-300;
-  background: $gray-400;
+  background: transparent;
   margin-top: -0.4rem;
 }
 
@@ -460,7 +462,7 @@ td {
   /*◘*/
   font-size: 0.625rem;
   line-height: 0.625rem;
-  color: #dedede;
+  color: $gray-200;
 }
 
 /** quick open **/
@@ -495,7 +497,7 @@ td {
 }
 
 .typora-search-spinner > div {
-  background: #fff;
+  background: $white;
 }
 
 #write pre.md-meta-block {
@@ -566,7 +568,7 @@ td {
 }
 
 #toc-dropmenu {
-  background: rgba(50, 54, 59, 0.93);
+  background: rgba($gray-300, 10%);;
   border: 1px solid rgba(253, 253, 253, 0.15);
 }
 
@@ -628,7 +630,7 @@ h6.md-focus .md-attr,
 }
 
 .modal-content {
-  background: var($main-bg);
+  background: $main-bg;
   border: 0;
 }
 
@@ -650,11 +652,11 @@ h6.md-focus .md-attr,
 }
 
 .modal-content .btn-primary {
-  border-color: var(--primary-color);
+  border-color: $red-300;
 }
 
 .md-table-resize-popover {
-  background: $gray-500;
+  background: $gray-800;
 }
 
 .form-inline .input-group .input-group-addon {
@@ -670,12 +672,12 @@ h6.md-focus .md-attr,
 .context-menu,
 #spell-check-panel,
 #footer-word-count-info {
-  background: #42464a;
+  background: $gray-800;
 }
 
 .context-menu.dropdown-menu .divider,
 .dropdown-menu .divider {
-  background: #777777;
+  background: $gray-800;
   opacity: 1;
 }
 
@@ -693,13 +695,13 @@ footer {
 }
 
 #file-info-file-path .file-info-field-value:hover {
-  background: #555;
-  color: #dedede;
+  background: $gray-800;
+  color: $gray-100;
 }
 
 .megamenu-content,
 .megamenu-opened header {
-  background: var($main-bg);
+  background: $main-bg;
 }
 
 .megamenu-menu-panel h2,
@@ -773,7 +775,7 @@ footer {
 }
 
 .megamenu-menu-panel .btn {
-  border: 1px solid #eee;
+  border: 1px solid $gray-100;
   background: transparent;
 }
 
@@ -801,32 +803,32 @@ footer {
 
 #top-titlebar,
 #top-titlebar * {
-  color: var(--item-hover-text-color);
+  color: $red-300;
 }
 
 .typora-sourceview-on #toggle-sourceview-btn,
 #footer-word-count:hover,
 .ty-show-word-count #footer-word-count {
-  background: #333333;
+  background: $gray-400;
 }
 
 #toggle-sourceview-btn:hover {
-  color: #eee;
-  background: #333333;
+  color: $gray-100;
+  background: $gray-800;
 }
 
 /** focus mode */
 .on-focus-mode .md-end-block:not(.md-focus):not(.md-focus-container) * {
-  color: #686868 !important;
+  color: $gray-300 !important;
 }
 
 .on-focus-mode .md-end-block:not(.md-focus) img,
 .on-focus-mode .md-task-list-item:not(.md-focus-container) > input {
-  opacity: #686868 !important;
+  opacity: $gray-300 !important;
 }
 
 .on-focus-mode li[cid]:not(.md-focus-container) {
-  color: #686868;
+  color: $gray-200;
 }
 
 .on-focus-mode
@@ -835,12 +837,12 @@ footer {
   > *:not(.CodeMirror-activeline)
   *,
 .on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) * {
-  color: #686868 !important;
+  color: $gray-300 !important;
 }
 
 .on-focus-mode .md-focus,
 .on-focus-mode .md-focus-container {
-  color: #fff;
+  color: $white;
 }
 
 .on-focus-mode
@@ -848,7 +850,7 @@ footer {
   .CodeMirror-code
   > *:not(.CodeMirror-activeline)
   * {
-  color: #686868 !important;
+  color: $gray-300 !important;
 }
 
 /*diagrams*/
@@ -871,7 +873,7 @@ footer {
 .active-tab-files #info-panel-tab-file:hover,
 .active-tab-outline #info-panel-tab-outline,
 .active-tab-outline #info-panel-tab-outline:hover {
-  color: #eee;
+  color: $gray-100;
 }
 
 .sidebar-footer-item:hover,
@@ -889,7 +891,7 @@ footer {
 #sidebar-files-menu {
   border: solid 1px;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
-  background: var($main-bg);
+  background: $main-bg;
 }
 
 .file-list-item {
@@ -908,24 +910,31 @@ footer {
   height: 32px;
 }
 
+.file-node-content {
+  color: $gray-300;
+  &:hover {
+    color: $gray-200;
+  }
+}
+
 .file-library-node.active > .file-node-content,
 .file-list-item.active {
-  color: white;
-  color: var(--active-file-text-color);
+  color: $gray-200;
+
 }
 
 .file-library-node.active > .file-node-background {
   background: rgb(34, 34, 34);
-  background: var(--active-file-bg-color);
+  background: $red-500
 }
 .file-list-item.active {
   background: rgb(34, 34, 34);
-  background: var(--active-file-bg-color);
+  background: $red-500
 }
 
 #ty-tooltip {
   background: black;
-  color: #eee;
+  color: $gray-100;
 }
 
 .md-task-list-item > input {
@@ -935,23 +944,23 @@ footer {
 }
 
 .md-mathjax-midline {
-  background: #57616b;
+  background: $gray-300;
   border-bottom: none;
 }
 
 footer.ty-footer {
-  border-color: #656565;
+  border-color: $gray-400
 }
 
 .ty-preferences .btn-default {
   background: transparent;
 }
 .ty-preferences .btn-default:hover {
-  background: #57616b;
+  background: $gray-300;
 }
 
 .ty-preferences select {
-  border: 1px solid #989698;
+  border: 1px solid $gray-400;
   height: 21px;
 }
 
@@ -959,12 +968,12 @@ footer.ty-footer {
 .export-item.active,
 .export-items-list-control,
 .export-detail {
-  background: var(--item-hover-bg-color);
+  background: $red-500
 }
 
 .ty-preferences input[type="search"] {
-  border-color: $gray-500;
-  background: $gray-500;
+  border-color: $gray-800;
+  background: $gray-800;
   line-height: 22px;
   border-radius: 6px;
   color: white;
@@ -1001,16 +1010,16 @@ footer.ty-footer {
 }
 
 .nav-group-item:active {
-  background: #474d54 !important;
+  background: $gray-400 !important;
 }
 
 .md-search-hit {
   background: rgba(199, 140, 60, 0.81);
-  color: #eee;
+  color: $gray-100;
 }
 
 .md-search-hit * {
-  color: #eee;
+  color: $gray-100;
 }
 
 #md-searchpanel input {

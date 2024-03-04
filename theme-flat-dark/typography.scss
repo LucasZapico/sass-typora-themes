@@ -29,18 +29,18 @@ em,
   font-style: italic;
 }
 
-blockquote {
-  background-color: $gray-300;
-  padding: 0.5rem;
-  border-left: darken($gray-300, 10%) solid 10px;
-}
+// blockquote {
+//   background-color: $gray-300;
+//   padding: 0.5rem;
+//   border-left: darken($gray-300, 10%) solid 10px;
+// }
 
 
 @include headerType($header-family, $header-line-height, $header-weight);
 
 
 @media screen and (min-width: 100px) {
-  $type-scaler: 1.2; //$type-scaler;
+  $type-scaler: 1.17; //$type-scaler;
   $header-base-size: $type-base-size; //16px;
   @include typeScales($header-base-size, $type-scaler);
 

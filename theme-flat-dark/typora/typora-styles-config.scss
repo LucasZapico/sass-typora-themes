@@ -1,5 +1,5 @@
 /***
-This config aim to make the commonly altered elements in the theme easier to change.
+This config aim to make the commonly altegray elements in the theme easier to change.
 **/
 
 $main-bg: $gray-800;
@@ -8,20 +8,20 @@ $sidebar-bg: $gray-800;
 $sidebar-text: $gray-200;
 
 // selected text color
-$accent-color-bg: rgba($yellow-700, 40%);
-$accent-color: rgba($yellow-800, 10%);
+$accent-color-bg: rgba($gray-700, 40%);
+$accent-color: rgba($gray-800, 10%);
 $tooltip: $gray-300;
 
 /***
 typography color 
 **/
-$header-color: $yellow-100;
-$header-1: $yellow-100;
-$header-2: $yellow-200;
-$header-3: $red-400;
-$header-4: $red-500;
-$header-5: $red-600;
-$header-6: $red-700;
+$header-color: $gray-100;
+$header-1: $gray-100;
+$header-2: $gray-200;
+$header-3: $gray-400;
+$header-4: $gray-500;
+$header-5: $gray-600;
+$header-6: $gray-700;
 
 /**
 body color handles, p,input, select, textarea, button, ul, ol, dl, figure, blockquote, table, hr
@@ -39,11 +39,11 @@ $tooltip-bg: $gray-800;
 /**
 Block Quote
 **/
-$blockquote-bg: $yellow-800;
-$blockquote-border: $yellow-400;
+$blockquote-bg: $gray-800;
+$blockquote-border: $gray-400;
 $blockquote-color: $gray-200;
 
 /**
 ** mark or highlight color
 **/
-$mark-color: $yellow-200;
+$mark-color: $yellow-100;

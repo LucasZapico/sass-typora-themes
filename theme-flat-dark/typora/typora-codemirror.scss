@@ -1,12 +1,12 @@
 .CodeMirror {
   height: 300px;
   height: auto;
-  background-color: $gray-500;
+  background-color: $gray-800;
 }
 
 .CodeMirror.cm-s-inner {
   background: inherit;
-  background: $gray-500;
+  background: $gray-800;
 }
 
 .CodeMirror-scroll {
@@ -29,109 +29,109 @@
 .CodeMirror-linenumber {
   padding: 0 3px 0 5px;
   text-align: right;
-  color: #999;
+  color: $gray-300;
 }
 
 .cm-s-inner .cm-keyword {
-  color: #708;
+  color: $red-300;
 }
 
 .cm-s-inner .cm-atom,
 .cm-s-inner.cm-atom {
-  color: #219;
+  color: $brown-300;
 }
 
 .cm-s-inner .cm-number {
-  color: #164;
+  color: $forest-400;
 }
 
 .cm-s-inner .cm-def {
-  color: #00f;
+  color: $red-400;
 }
 
 .cm-s-inner .cm-variable {
-  color: #000;
+  color: $black;
 }
 
 .cm-s-inner .cm-variable-2 {
-  color: #05a;
+  color: $red-400;
 }
 
 .cm-s-inner .cm-variable-3 {
-  color: #085;
+  color: $forest-300;
 }
 
 .cm-s-inner .cm-string {
-  color: #a11;
+  color: $red-400;
 }
 
 .cm-s-inner .cm-property {
-  color: #000;
+  color: $black;
 }
 
 .cm-s-inner .cm-operator {
-  color: #981a1a;
+  color: $red-300;
 }
 
 .cm-s-inner .cm-comment,
 .cm-s-inner.cm-comment {
-  color: #a50;
+  color: $red-400;
 }
 
 .cm-s-inner .cm-string-2 {
-  color: #f50;
+  color: $red-200;
 }
 
 .cm-s-inner .cm-meta {
-  color: #555;
+  color: $gray-400;
 }
 
 .cm-s-inner .cm-qualifier {
-  color: #555;
+  color: $gray-400;
 }
 
 .cm-s-inner .cm-builtin {
-  color: #30a;
+  color: $brown-500;
 }
 
 .cm-s-inner .cm-bracket {
-  color: #997;
+  color: $forest-200;
 }
 
 .cm-s-inner .cm-tag {
-  color: #170;
+  color: $forest-400;
 }
 
 .cm-s-inner .cm-attribute {
-  color: darken(rgb(52, 52, 200), 20%);
+  color: darken($red-300, 10%);
 }
 
 .cm-s-inner .cm-header,
 .cm-s-inner.cm-header {
-  color: darken(rgb(65, 65, 250), 20%);
+  color: darken($red-200, 10%);
 }
 
 .cm-s-inner .cm-quote,
 .cm-s-inner.cm-quote {
-  color: #090;
+  color: $forest-300;
 }
 
 .cm-s-inner .cm-hr,
 .cm-s-inner.cm-hr {
-  color: #999;
+  color: $gray-300;
 }
 
 .cm-s-inner .cm-link,
 .cm-s-inner.cm-link {
-  color: #00c;
+  color: $red-300;
 }
 
 .cm-negative {
-  color: #d44;
+  color: $red-200;
 }
 
 .cm-positive {
-  color: #292;
+  color: $forest-100;
 }
 
 .cm-header,

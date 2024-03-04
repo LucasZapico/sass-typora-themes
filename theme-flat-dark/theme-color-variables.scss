@@ -2,21 +2,49 @@ $black: #000000;
 $white: #ffffff;
 
 /**
-** red base gray
+** gray
 **/
-$gray-100: #fafafa;
-$gray-200: #b7b7b7;
-$gray-300: #797878;
-$gray-400: #3f3f3f;
-$gray-500: #0b0a0a;
+$gray-100: #fbfbfb;
+$gray-200: #d4d4d4;
+$gray-300: #afafaf;
+$gray-400: #8b8b8b;
+$gray-500: #686868;
+$gray-600: #484848;
+$gray-700: #2a2a2a;
+$gray-800: #0c0c0c;
 
 /**
 ** RED
 **/
-$red-100: #ff1414;
-$red-200: #ce1d22;
-$red-300: #9d2327;
-$red-400: #6d2526;
-$red-500: #3d2121;
+$red-100: #e00000;
+$red-200: #c00b0b;
+$red-300: #a31414;
+$red-400: #881b1b;
+$red-500: #6f2020;
+// 👇 text in light mode or background in darkmode
+$red-600: #582222;
+$red-700: #442222;
+$red-800: #322020;
 
-$blue: blue;
+$yellow-100: #ebe700;
+$yellow-200: #d5cb17;
+$yellow-300: #d5d03e;
+$yellow-400: #62622b;
+$yellow-500: #555526;
+// 👇 text in light mode or background in darkmode
+$yellow-600: #585822;
+$yellow-700: #444422;
+$yellow-800: #323220;
+
+$brown-100: #da6c07;
+$brown-200: #b95f0b;
+$brown-300: #99530d;
+$brown-400: #7b460e;
+$brown-500: #5d3a0e;
+
+$forest-100: #539d53;
+$forest-200: #3e803e;
+$forest-300: #29642a;
+// 👇 only good for background in darkmode
+$forest-400: #154a17;
+$forest-500: #023102;
