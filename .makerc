@@ -1,0 +1,3 @@
+# Path to Typora themes directory
+# Apple: Generally found ${HOME}/Library/Application Support/abnerworks.Typora/themes/
+PathToTyporaThemes:=${HOME}/Library/Application\ Support/abnerworks.Typora/themes/
