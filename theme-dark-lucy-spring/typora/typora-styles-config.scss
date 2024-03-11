@@ -1,0 +1,49 @@
+/***
+This config aim to make the commonly altered elements in the theme easier to change.
+**/
+
+$main-bg: $black;
+// sidebar
+$sidebar-bg: $gray-800;
+$sidebar-text: $gray-200;
+
+// selected text color
+$accent-color-bg: rgba($magenta-100, 40%);
+$accent-color: rgba($magenta-200, 10%);
+$tooltip: $gray-300;
+
+/***
+typography color 
+**/
+$header-color: $yellow-300;
+$header-1: $magenta-200;
+$header-2: $magenta-300;
+$header-3: $cyan-300;
+$header-4: $yellow-200;
+$header-5: $mint-200;
+$header-6: $mint-300;
+
+/**
+body color handles, p,input, select, textarea, button, ul, ol, dl, figure, blockquote, table, hr
+**/ 
+$body-color: $gray-100;
+// strong color, b, th, dt, strong
+$strong-color: $gray-200;
+
+
+/**
+Tool Tip
+**/
+$tooltip-bg: $gray-800;
+
+/**
+Block Quote
+**/
+$blockquote-bg: $mint-800;
+$blockquote-border: $mint-400;
+$blockquote-color: $gray-200;
+
+/**
+** mark or highlight color
+**/
+$mark-color: $yellow-200;

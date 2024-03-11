@@ -1,0 +1,92 @@
+#write {
+  input[type=checkbox]{
+    background-color: transparent;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $header-color
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  color: $header-color;
+}
+
+h1 {
+  // fontsize
+  @include xxl;
+  line-height: $leading-normal;
+  @include mt-2;
+  @include mb-1;
+  font-weight: bold;
+  // 👇 custom heading 1 color override
+  color: $header-1;
+}
+
+h2 {
+  @include xl;
+  line-height: $leading-normal;
+  @include mt-2;
+  @include mb-1;
+  letter-spacing: -1px;
+  font-weight: bold;
+  // 👇 custom heading color override
+  color: $header-2;
+  font-style: italic;
+}
+
+h3 {
+  @include lg;
+  line-height: $leading-normal;
+  @include mt-2;
+  @include mb-1;
+  letter-spacing: -1px;
+  font-weight: bold;
+  
+  // 👇 custom heading color override
+  color: $header-3;
+}
+
+h4 {
+  @include md;
+  line-height: $leading-snug;
+  @include mt-2;
+  @include mb-1;
+  font-weight: bold;
+  color: $header-4;
+  font-style: italic;
+
+}
+
+h5 {
+  @include sm;
+  line-height: $leading-snug;
+  @include mt-2;
+  @include mb-1;
+  color: $header-5;
+  font-weight: bold;
+}
+
+h6 {
+  @include xs;
+  line-height: $leading-snug;
+  @include mt-2;
+  @include mb-1;
+  color: $header-6;
+  font-weight: bold;
+}
+}
